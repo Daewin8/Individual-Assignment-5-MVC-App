@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="/styles/styles.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>New Animal</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="/animal/all">
+        <img src="/images/logo.jpg" alt="" width="80" height="60">
+    </a>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/animal/all">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Species</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Habitats</a>
+        </li>
+    </ul>
+</nav>
+<div class="container">
+    <h1>Create New Animal</h1>
+    <form action="/animal/new" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Animal Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter animal name" required/>
+        </div>
+        <div class="mb-3">
+            <label for="scientificName" class="form-label">Scientific Name</label>
+            <input type="text" id="scientificName" name="scientificName" class="form-control" placeholder="Enter scientific name"/>
+        </div>
+        <div class="mb-3">
+            <label for="species" class="form-label">Species</label>
+            <input type="text" id="species" name="species" class="form-control" placeholder="Enter species" required/>
+        </div>
+        <div class="mb-3">
+            <label for="habitat" class="form-label">Habitat</label>
+            <input type="text" id="habitat" name="habitat" class="form-control" placeholder="Enter habitat" required/>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea id="description" name="description" class="form-control" placeholder="Enter description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Animal</button>
+    </form>
+</div>
+</body>
+</html>
